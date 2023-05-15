@@ -20,10 +20,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    
-    - name: Compilar no JAVA
-      run: mvn compile
+      run: mvn -B package
       
     - name: Run Program - Java
       run: java -cp target/classes org.example.Main
@@ -37,4 +34,3 @@ jobs:
           dockerfile: dockerfile
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-   
