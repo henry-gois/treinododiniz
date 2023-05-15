@@ -14,9 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Compilar Program - Java
-      run: javac -cp src/classes Main.java
+      run: |
+       cd src
+       javac -cp . Main.java
     - name: Run Program - Java
-      run: java -cp src/classes Main
+      run: |
+       java -cp src/classes Main
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Deploy Docker image
