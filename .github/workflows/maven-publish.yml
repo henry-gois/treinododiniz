@@ -13,7 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+    - name: Compilar Program - Java
+      run: javac -cp src/classes Main.java
     - name: Run Program - Java
       run: java -cp src/classes Main
     
