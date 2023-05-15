@@ -23,7 +23,7 @@ jobs:
       run: mvn -B package
       
     - name: Run Program - Java
-      run: java -cp target/classes org.example.Main
+      run: java -cp src/classes org.example.Main
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Deploy Docker image
