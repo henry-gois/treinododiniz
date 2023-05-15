@@ -19,7 +19,8 @@ jobs:
        javac -cp . Main.java
     - name: Run Program - Java
       run: |
-       java -cp src/classes Main
+       cd src
+       java -cp . Main
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Deploy Docker image
